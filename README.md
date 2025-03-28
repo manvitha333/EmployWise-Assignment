@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+EmployWise Frontend
 
-## Getting Started
+This is the frontend of the EmployWise project, built using Next.js and React.js.
 
-First, run the development server:
+Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Make sure you have Node.js installed on your machine.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Download and install Node.js
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install dependencies using npm, yarn, or pnpm
 
-## Learn More
+Installation
 
-To learn more about Next.js, take a look at the following resources:
+Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+git clone https://github.com/your-username/employwise-frontend.git
+cd employwise-frontend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Install dependencies:
 
-## Deploy on Vercel
+npm install  # or yarn install or pnpm install
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Start the development server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm run dev  # or yarn dev or pnpm dev
+
+Open http://localhost:3000 in your browser.
+
+Project Structure
+📦 employwise-frontend
+├── 📂 node_modules
+├── 📂 public
+├── 📂 src
+│   ├── 📂 app
+│   │   ├── 📂 login
+│   │   │   ├── 📜 page.js
+│   │   ├── 📂 users
+│   │   │   ├── 📜 page.js
+│   │   ├── 📜 favicon.ico
+│   │   ├── 📜 globals.css
+│   │   ├── 📜 layout.js
+│   │   ├── 📜 page.js
+│   ├── 📂 components
+│   │   ├── 📜 EditUserModal.js
+│   ├── 📂 utils
+│   │   ├── 📜 api.js
+├── 📜 .gitignore
+├── 📜 eslint.config.mjs
+├── 📜 jsconfig.json
+├── 📜 next.config.mjs
+├── 📜 package-lock.json
+├── 📜 package.json
+├── 📜 postcss.config.mjs
+├── 📜 README.md
+
+
+Features
+
+Next.js (React framework) for fast performance
+
+Tailwind CSS for styling
+
+API Integration with ReqRes API for fetching employee data
+
+Dynamic Routing for user profiles
+
+Responsive Design
+
+API Usage
+
+This project fetches employee data from the ReqRes API. Ensure your next.config.js allows remote images:
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'reqres.in',
+      },
+    ],
+  },
+};
+
+export default nextConfig;
+
+Deployment
+
+You can deploy this project using Vercel:
+
+vercel
+
+Contributing
+
+Feel free to contribute! Fork the repo and submit a pull request.
+
+License
+
+This project is licensed under the MIT License.
+
+
+
+
